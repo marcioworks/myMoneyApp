@@ -2,6 +2,10 @@
 
 basic structure created.
 
-#tag 1.4.0 
+# tag 1.4.0 
 
 Components: Menu, MenuItem, SideBar, MenuTree 
+
+# tag 1.5.0 
+
+Footer Component

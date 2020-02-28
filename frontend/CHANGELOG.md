@@ -12,3 +12,6 @@ Footer Component
 
 # tag 1.6.0 
 routes, billingCycles and dashboard components
+
+# tag 1.7.0 
+content and content header components

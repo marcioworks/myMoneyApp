@@ -15,3 +15,7 @@ routes, billingCycles and dashboard components
 
 # tag 1.7.0 
 content and content header components
+
+# tag 1.8.0 
+dashboard component with redux and dashboard2 component without redux
+

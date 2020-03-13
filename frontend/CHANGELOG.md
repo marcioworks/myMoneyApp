@@ -19,3 +19,6 @@ content and content header components
 # tag 1.8.0 
 dashboard component with redux and dashboard2 component without redux
 
+# tag 1.9.0 
+billing cycle tabs and structure.
+

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import ContentHeader from '../commons/template/contetHeader'
+import ContentHeader from '../commons/template/contentHeader'
 import Content from '../commons/template/content'
 import ValueBox from '../commons/widget/valueBox'
 import Row from '../commons/layout/row'

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import {bindActionCreators} from 'redux'
-import {connect} from 'react-redux'
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
 
 import ContentHeader from '../commons/template/contentHeader'
 import Content from '../commons/template/content'
@@ -9,13 +9,14 @@ import TabsHeader from '../commons/tabs/tabsHeader'
 import TabsContent from '../commons/tabs/tabsContent'
 import TabHeader from '../commons/tabs/tabHeader'
 import TabContent from '../commons/tabs/tabContent'
-import {selectTab,showTabs} from '../commons/tabs/tabActions'
+import { selectTab, showTabs } from '../commons/tabs/tabActions'
+import List from './billingCycleList'
 
 
 class BillingCycle extends Component {
-    componentWillMount(){
+    componentWillMount() {
         this.props.selectTab('tabList')
-        this.props.showTabs('tabList','tabCreate')
+        this.props.showTabs('tabList', 'tabCreate')
     }
     render() {
         return (
@@ -30,7 +31,9 @@ class BillingCycle extends Component {
                             <TabHeader label=' Excluir' icon='trash-o' target='tabDelete' />
                         </TabsHeader>
                         <TabsContent>
-                            <TabContent id='tabList'><h1>Listar</h1></TabContent>
+                            <TabContent id='tabList'>
+                                <List/>
+                            </TabContent>
                             <TabContent id='tabCreate'><h1>Incluir</h1></TabContent>
                             <TabContent id='tabUpdate'><h1>Alterar</h1></TabContent>
                             <TabContent id='tabDelete'><h1>Remover</h1></TabContent>
@@ -43,5 +46,5 @@ class BillingCycle extends Component {
 
 
 }
-const mapDispatchToProps = dispatch => bindActionCreators({selectTab,showTabs},dispatch)
-export default connect(null,mapDispatchToProps)(BillingCycle)
+const mapDispatchToProps = dispatch => bindActionCreators({ selectTab, showTabs }, dispatch)
+export default connect(null, mapDispatchToProps)(BillingCycle)

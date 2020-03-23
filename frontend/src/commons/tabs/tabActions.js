@@ -14,9 +14,3 @@ export function showTabs(...tabsId) {
     }
 }
 
-export function showUpdate(billingCycle){
-    return[
-        showTabs('tabUpdate'),
-        selectTab('tabUpdate')
-    ]
-}

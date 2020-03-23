@@ -13,3 +13,10 @@ export function showTabs(...tabsId) {
         payload:tabsToShow
     }
 }
+
+export function showUpdate(billingCycle){
+    return[
+        showTabs('tabUpdate'),
+        selectTab('tabUpdate')
+    ]
+}

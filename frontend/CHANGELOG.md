@@ -22,3 +22,6 @@ dashboard component with redux and dashboard2 component without redux
 # tag 1.9.0 
 billing cycle tabs and structure.
 
+# tag 1.9.0 
+basic form and actions created
+

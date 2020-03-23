@@ -15,11 +15,14 @@ export function getList() {
 }
 
 export function create(values) {
-    return (submit(values, 'post'))
+    return submit(values, 'post')
 }
 
 export function update(values) {
-    return (submit(values, 'put'))
+    return submit(values, 'put')
+}
+export function remove (values){
+    return submit(values,'delete')
 }
 
 function submit(values, method) {
@@ -39,6 +42,14 @@ export function showUpdate(billingCycle) {
     return [
         showTabs('tabUpdate'),
         selectTab('tabUpdate'),
+        initialize('billingCycleForm', billingCycle)
+
+    ]
+}
+export function showDelete(billingCycle) {
+    return [
+        showTabs('tabDelete'),
+        selectTab('tabDelete'),
         initialize('billingCycleForm', billingCycle)
 
     ]

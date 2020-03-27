@@ -4,6 +4,7 @@ import { bindActionCreators } from 'redux'
 import { Field, arrayInsert, arrayRemove } from 'redux-form'
 import Grid from '../commons/layout/grid'
 import Input from '../commons/form/input'
+import If from '../commons/operator/if'
 
 class ItemList extends Component {
 
@@ -14,10 +15,10 @@ class ItemList extends Component {
         }
     }
     remove(index) {
-        if (!this.props.readOnly && this.props.list.length > 1){
+        if (!this.props.readOnly && this.props.list.length > 1) {
             this.props.arrayRemove('billingCycleForm', this.props.field, index)
         }
-        
+
 
     }
     renderRows() {
@@ -28,6 +29,10 @@ class ItemList extends Component {
                     placeholder='Informe o Nome' readOnly={this.props.readOnly} /></td>
                 <td><Field name={`${this.props.field}[${index}].value`} component={Input}
                     placeholder='Informe o Valor' readOnly={this.props.readOnly} /></td>
+                <If test={this.props.showStatus}>
+                    <td><Field name={`${this.props.field}[${index}].status`} component={Input}
+                        placeholder='Informe o Valor' readOnly={this.props.readOnly} /></td>
+                </If>
                 <td>
                     <button type='button' className='btn btn-success'
                         onClick={() => this.add(index + 1)}>
@@ -57,6 +62,9 @@ class ItemList extends Component {
                         <thead>
                             <th>Nome</th>
                             <th>Valor</th>
+                            <If test={this.props.showStatus}>
+                                <th>Status</th>
+                            </If>
                             <th className='table-actions'> Ações</th>
                         </thead>
                         <tbody>

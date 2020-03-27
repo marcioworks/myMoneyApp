@@ -25,3 +25,6 @@ billing cycle tabs and structure.
 # tag 1.9.0 
 basic form and actions created
 
+# tag 1.12.0 
+item list for credits and debts list
+

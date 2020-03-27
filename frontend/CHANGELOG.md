@@ -28,3 +28,6 @@ basic form and actions created
 # tag 1.12.0 
 item list for credits and debts list
 
+# tag 1.13.0 
+debts list form component
+

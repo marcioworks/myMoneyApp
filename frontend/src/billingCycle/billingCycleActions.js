@@ -4,7 +4,7 @@ import { reset as resetForm, initialize, updateSyncErrors } from 'redux-form'
 import { showTabs, selectTab } from '../commons/tabs/tabActions'
 
 const BASE_URL = "http://localhost:3003/api"
-const INITIAL_VALUES = {credits:[{}]}
+const INITIAL_VALUES = { credits: [{}], debts: [{}] }
 
 export function getList() {
     const request = axios.get(`${BASE_URL}/billingCycles`)
@@ -21,8 +21,8 @@ export function create(values) {
 export function update(values) {
     return submit(values, 'put')
 }
-export function remove (values){
-    return submit(values,'delete')
+export function remove(values) {
+    return submit(values, 'delete')
 }
 
 function submit(values, method) {
